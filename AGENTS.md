@@ -70,36 +70,13 @@ hugo
 
 ## 📋 Guidelines for AI Agents
 
-### Language Requirements
-
-All text content MUST be written in English
-
-### Pre-Commit Build Verification
-
-**ALWAYS run `hugo` command before committing to verify the build:**
-
-```bash
-hugo
-```
-
-- This ensures all changes build successfully
-- Check for any build errors or warnings
-- Verify the output in `public/` directory
-- **NEVER commit if the build fails**
-- Fix any errors before proceeding with the commit
-
-### File Modification Guidelines
-
-- **NEVER MODIFY**: `public/` directory (build output)
-- **MODIFY WITH CAUTION**: `config.toml`, `themes/` directory
-- **Creating New Posts**: Always create in `content/posts/` directory
-- **Style Modifications**: Add custom styles in `static/css/style.css`
-- **Layout Modifications**: Override theme layouts in `layouts/` directory
-
-## 🛠️ Requirements
-
-- **Hugo Extended** version required
-- Git installation required
+- All text content MUST be written in English
+- Run `hugo` command before committing to verify the build
+- Don't modify `public/` directory (it's build output)
+- Don't modify `config.toml`, `themes/` directory (it's theme)
+- Always create new posts in `content/posts/` directory
+- Add custom styles in `static/css/style.css`
+- Override theme layouts in `layouts/` directory
 
 ## 📖 Reference Documentation
 
