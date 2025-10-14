@@ -64,6 +64,20 @@ buildExpired = false
     name = "email"
     url = "mailto:realkorokke@outlook.com"
 
+  # Comments settings (https://giscus.app)
+  [params.giscus]
+    repo = "unsafe9/unsafe9.github.io"
+    repoID = "R_kgDOQBWLlg"
+    category = "General"
+    categoryID = "DIC_kwDOQBWLls4CwnP9"
+    mapping = "pathname"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    theme = "preferred_color_scheme"
+    lang = "ko"
+    loading = "lazy"
+
   # Search settings
   [params.fuseOpts]
     isCaseSensitive = false
