@@ -75,19 +75,6 @@ title = "Your Blog Title"
   description = "Your blog description"
 ```
 
-### giscus Comment Settings
-
-1. Create settings on [giscus.app](https://giscus.app/)
-2. Update the `[params.giscus]` section in the `config.toml` file:
-
-```toml
-[params.giscus]
-  repo = "username/repo"
-  repoId = "YOUR_REPO_ID"
-  category = "General"
-  categoryId = "YOUR_CATEGORY_ID"
-```
-
 ### Modify Style
 
 `static/css/style.css` to modify the design.
