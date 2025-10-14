@@ -4,47 +4,23 @@
 {{- /* Giscus Comments */ -}}
 {{- if .Site.Params.giscus.repo -}}
 <div id="giscus-comments" class="comments">
-    <script src="https://giscus.app/client.js" data-repo="{{ .Site.Params.giscus.repo }}"
-        data-repo-id="{{ .Site.Params.giscus.repoID }}" data-category="{{ .Site.Params.giscus.category }}"
-        data-category-id="{{ .Site.Params.giscus.categoryID }}" data-mapping="{{ .Site.Params.giscus.mapping | default "
-        pathname" }}" data-strict="{{ .Site.Params.giscus.strict | default " 0" }}"
-        data-reactions-enabled="{{ .Site.Params.giscus.reactionsEnabled | default " 1" }}"
-        data-emit-metadata="{{ .Site.Params.giscus.emitMetadata | default " 0" }}"
-        data-input-position="{{ .Site.Params.giscus.inputPosition | default " bottom" }}"
-        data-theme="{{ .Site.Params.giscus.theme | default " preferred_color_scheme" }}"
-        data-lang="{{ .Site.Params.giscus.lang | default " ko" }}"
-        data-loading="{{ .Site.Params.giscus.loading | default " lazy" }}" crossorigin="anonymous" async>
-        </script>
+    <script src="https://giscus.app/client.js"
+        data-repo="{{ .Site.Params.giscus.repo }}"
+        data-repo-id="{{ .Site.Params.giscus.repoID }}"
+        data-category="{{ .Site.Params.giscus.category }}"
+        data-category-id="{{ .Site.Params.giscus.categoryID }}"
+        data-mapping="{{ .Site.Params.giscus.mapping | default "pathname" }}"
+        data-strict="{{ .Site.Params.giscus.strict | default "0" }}"
+        data-reactions-enabled="{{ .Site.Params.giscus.reactionsEnabled | default "1" }}"
+        data-emit-metadata="{{ .Site.Params.giscus.emitMetadata | default "0" }}"
+        data-input-position="{{ .Site.Params.giscus.inputPosition | default "bottom" }}"
+        data-theme="{{ .Site.Params.giscus.theme | default "preferred_color_scheme" }}"
+        data-lang="{{ .Site.Params.giscus.lang | default "ko" }}"
+        data-loading="{{ .Site.Params.giscus.loading | default "lazy" }}"
+        crossorigin="anonymous"
+        async>
+    </script>
 </div>
-{{- end }}
-
-{{- /* utterances Comments (alternative) */ -}}
-{{- if .Site.Params.utterances.repo -}}
-<div id="utterances-comments" class="comments">
-    <script src="https://utteranc.es/client.js" repo="{{ .Site.Params.utterances.repo }}"
-        issue-term="{{ .Site.Params.utterances.issueTerm | default " pathname" }}"
-        theme="{{ .Site.Params.utterances.theme | default " github-light" }}" crossorigin="anonymous" async>
-        </script>
-</div>
-{{- end }}
-
-{{- /* Disqus Comments (legacy) */ -}}
-{{- if .Site.Params.disqus.shortname -}}
-<div id="disqus_thread" class="comments"></div>
-<script>
-    var disqus_config = function () {
-        this.page.url = "{{ .Permalink }}";
-        this.page.identifier = "{{ .RelPermalink }}";
-    };
-    (function () {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://{{ .Site.Params.disqus.shortname }}.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-        Disqus.</a></noscript>
 {{- end }}
 
 {{- end }}
