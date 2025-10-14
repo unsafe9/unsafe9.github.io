@@ -46,6 +46,9 @@ buildExpired = false
     favicon32x32 = "/favicon.ico"
     apple_touch_icon = "/favicon.ico"
 
+  # Home page mode - show home info instead of posts list
+  homeInfoEnabled = true
+  
   # Home page settings
   [params.homeInfoParams]
     Title = "Welcome to unsafe9's Tech Blog 👋"
