@@ -53,34 +53,19 @@ toc: true                 # Auto-generate table of contents
 ---
 ```
 
-## 🔧 Development Commands
+## 🔧 Development Guidelines
 
-### Run Local Development Server
-```bash
-hugo server -D
-```
-- `-D` flag: Also display draft posts
+- Run local development server: `hugo server -D`
 - Access via browser at `http://localhost:1313`
+- Build: `hugo`
+- See documentations using Context7: `Hugo`, `Hugo PaperMod`, `Markdown`
 
-### Build
-```bash
-hugo
-```
-- Generates static site in `public/` directory
+## 📋 Code Guidelines
 
-## 📋 Guidelines for AI Agents
-
-- All text content MUST be written in English
-- Run `hugo` command before committing to verify the build
+- All text (code, comments, documents, etc.) **MUST** be written in English
+- Run the build command before committing to verify the build
 - Don't modify `public/` directory (it's build output)
-- Don't modify `config.toml`, `themes/` directory (it's theme)
+- Don't modify `themes/` directory (it's theme submodules)
 - Always create new posts in `content/posts/` directory
 - Add custom styles in `static/css/style.css`
 - Override theme layouts in `layouts/` directory
-
-## 📖 Reference Documentation
-
-See the following documentation using Context7 when you need:
-- Hugo
-- Hugo PaperMod
-- Markdown

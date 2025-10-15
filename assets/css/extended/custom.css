@@ -1,0 +1,40 @@
+/* Home Info with Profile Image - Centered Layout */
+.home-info {
+    text-align: center !important;
+}
+
+.profile-image-wrapper {
+    margin: 0 auto 1rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 130px !important;
+    height: 130px !important;
+}
+
+.profile-image {
+    width: 130px !important;
+    height: 130px !important;
+    max-width: 130px !important;
+    max-height: 130px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 3px solid var(--border) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.home-info .entry-header {
+    text-align: center !important;
+}
+
+.home-info .entry-header h1 {
+    text-align: center !important;
+}
+
+.home-info .entry-content {
+    text-align: center !important;
+}
+
+.home-info .entry-footer {
+    display: flex !important;
+    justify-content: center !important;
+}

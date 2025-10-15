@@ -53,6 +53,7 @@ buildExpired = false
   [params.homeInfoParams]
     Title = "Welcome to unsafe9's Tech Blog 👋"
     Content = "A blog about development and technology. Sharing knowledge and experiences."
+    ProfileImage = "https://github.com/unsafe9.png"
 
   # Social icons
   [[params.socialIcons]]
