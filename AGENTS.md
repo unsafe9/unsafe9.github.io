@@ -59,6 +59,7 @@ toc: true                 # Auto-generate table of contents
 - Access via browser at `http://localhost:1313`
 - Build: `hugo`
 - See documentations using Context7: `Hugo`, `Hugo PaperMod`, `Markdown`
+- Use `Chrome DevTools` after modifying the code to check the changes
 
 ## 📋 Code Guidelines
 

@@ -1,0 +1,127 @@
+{{- $hasJSON := false -}}
+{{- range .Site.Home.OutputFormats -}}
+  {{- if eq .Name "json" -}}
+    {{- $hasJSON = true -}}
+  {{- end -}}
+{{- end -}}
+{{- if $hasJSON -}}
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+let fuse;
+let sInput = document.getElementById('searchInput');
+let noResultsMsg = document.getElementById('no-results-message');
+
+// Load search index
+window.addEventListener('load', function () {
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                let data = JSON.parse(xhr.responseText);
+                if (data) {
+                    let options = {
+                        distance: 100,
+                        threshold: 0.4,
+                        ignoreLocation: true,
+                        keys: ['title', 'permalink', 'summary', 'content']
+                    };
+                    {{- if .Site.Params.fuseOpts }}
+                    options = {
+                        isCaseSensitive: {{ .Site.Params.fuseOpts.isCaseSensitive | default false }},
+                        shouldSort: {{ .Site.Params.fuseOpts.shouldSort | default true }},
+                        location: {{ .Site.Params.fuseOpts.location | default 0 }},
+                        distance: {{ .Site.Params.fuseOpts.distance | default 1000 }},
+                        threshold: {{ .Site.Params.fuseOpts.threshold | default 0.4 }},
+                        minMatchCharLength: {{ .Site.Params.fuseOpts.minMatchCharLength | default 0 }},
+                        keys: {{ .Site.Params.fuseOpts.keys | default (slice "title" "permalink" "summary" "content") }}
+                    };
+                    {{- end }}
+                    fuse = new Fuse(data, options);
+                }
+            } else {
+                console.log(xhr.responseText);
+            }
+        }
+    };
+    xhr.open('GET', "{{ "index.json" | absURL }}");
+    xhr.send();
+});
+
+function filterPosts(searchValue) {
+    let allPosts = document.querySelectorAll('.post-entry');
+    
+    // If search is empty, show all posts
+    if (searchValue.length === 0) {
+        allPosts.forEach(post => {
+            post.style.display = '';
+        });
+        if (noResultsMsg) {
+            noResultsMsg.style.display = 'none';
+        }
+        return;
+    }
+    
+    // Perform search
+    if (!fuse) return;
+    
+    let results = fuse.search(searchValue);
+    let matchedUrls = results.map(r => r.item.permalink);
+    
+    // Normalize URLs for comparison
+    let normalizedMatches = matchedUrls.map(url => {
+        // Remove protocol and trailing slash for comparison
+        return url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+    });
+    
+    let visibleCount = 0;
+    
+    // Filter posts
+    allPosts.forEach(post => {
+        let postLink = post.querySelector('a.entry-link');
+        if (postLink) {
+            let postUrl = postLink.href.replace(/^https?:\/\//, '').replace(/\/$/, '');
+            
+            if (normalizedMatches.some(match => postUrl.includes(match) || match.includes(postUrl))) {
+                post.style.display = '';
+                visibleCount++;
+            } else {
+                post.style.display = 'none';
+            }
+        }
+    });
+    
+    // Show/hide no results message
+    if (noResultsMsg) {
+        if (visibleCount === 0) {
+            noResultsMsg.style.display = 'block';
+        } else {
+            noResultsMsg.style.display = 'none';
+        }
+    }
+}
+
+// Execute search as each character is typed
+if (sInput) {
+    sInput.addEventListener('keyup', function (e) {
+        filterPosts(this.value.trim());
+    });
+    
+    // Clear search
+    sInput.addEventListener('search', function (e) {
+        if (!this.value) {
+            filterPosts('');
+        }
+    });
+}
+
+// Keyboard shortcuts
+document.addEventListener('keydown', function (e) {
+    // Escape key clears search
+    if (e.key === "Escape" && sInput) {
+        sInput.value = '';
+        filterPosts('');
+        sInput.blur();
+    }
+});
+</script>
+{{- end -}}
