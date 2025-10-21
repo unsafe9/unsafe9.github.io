@@ -1,0 +1,12 @@
+name = "TechBlog"
+license = "MIT"
+licenselink = "https://github.com/unsafe9/techblog/blob/main/LICENSE"
+description = "A clean, minimal Hugo theme for tech blogging"
+homepage = "https://github.com/unsafe9/techblog"
+tags = ["blog", "minimal", "clean", "responsive", "search", "comments"]
+features = ["responsive", "search", "rss", "tags", "comments", "reading-time"]
+min_version = "0.112.0"
+
+[author]
+  name = "unsafe9"
+  homepage = "https://github.com/unsafe9"

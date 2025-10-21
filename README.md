@@ -1,100 +1,129 @@
-# unsafe9's Tech Blog
+# Tech Blog
 
-🔗 https://unsafe9.github.io
+A clean, minimal Hugo static website built for tech blogging and deployed on GitHub Pages.
 
-## 🚀 Usage
+## Features
 
-### Requirements
+- ✅ Clean & minimal design
+- ✅ Post search functionality
+- ✅ Tag system with sidebar tag cloud
+- ✅ RSS feed
+- ✅ Giscus comments support (configurable)
+- ✅ Reading time calculation
+- ✅ Responsive design
+- ✅ Social icons (GitHub, LinkedIn, Email)
+- ✅ Fast and optimized
 
-- [Hugo Extended](https://gohugo.io/installation/)
+## Quick Start
+
+### Prerequisites
+
+- [Hugo Extended](https://gohugo.io/installation/) (v0.112.0 or later)
 - Git
 
-### Local Developments
+### Local Development
 
-1. **Clone Repository**
-
+1. Clone the repository:
 ```bash
 git clone https://github.com/unsafe9/unsafe9.github.io.git
 cd unsafe9.github.io
 ```
 
-2. **Run Development Server**
-
+2. Run the development server:
 ```bash
 hugo server -D
 ```
 
-Browse `http://localhost:1313`
+3. Visit `http://localhost:1313` to view your site
 
-3. **Write New Post**
+### Creating a New Post
 
 ```bash
 hugo new posts/my-new-post.md
 ```
 
-Open the generated file(`content/posts/my-new-post.md`) and write the content.
+Edit the generated file in `content/posts/my-new-post.md` and set `draft: false` when ready to publish.
 
-4. **Build**
+## Configuration
+
+Edit `config.toml` to customize your site:
+
+### Site Information
+```toml
+baseURL = 'https://unsafe9.github.io/'
+title = 'Your Blog Title'
+```
+
+### Profile & Social Links
+```toml
+[params]
+  description = 'Your blog description'
+  author = 'Your Name'
+  profileIcon = '/images/profile.png'
+
+  [params.social]
+    github = 'https://github.com/yourusername'
+    linkedin = 'https://linkedin.com/in/yourprofile'
+    email = 'mailto:your@email.com'
+```
+
+### Enable Giscus Comments
+
+1. Visit [giscus.app](https://giscus.app) to generate your configuration
+2. Add to `config.toml`:
+```toml
+[params.giscus]
+  repo = 'your-username/your-repo'
+  repoId = 'your-repo-id'
+  category = 'General'
+  categoryId = 'your-category-id'
+  mapping = 'pathname'
+  theme = 'light'
+```
+
+## Deployment
+
+The site automatically deploys to GitHub Pages when you push to the `main` branch using GitHub Actions.
+
+### Manual Deployment
 
 ```bash
-hugo
+hugo --gc --minify
 ```
 
-`public/` directory will be generated.
+The built site will be in the `public/` directory.
 
-## ✍️ Post Writing Guide
+## Theme Structure
 
-### Front Matter
-
-Add metadata to the top of the post:
-
-```yaml
----
-title: "Post Title"
-date: 2025-01-20
-draft: false # false: Public, true: Draft
-tags: ["Tag1", "Tag2"]
-categories: ["Category"]
-description: "Post Description (SEO)"
-toc: true # Auto generate table of contents
----
+```
+themes/techblog/
+├── layouts/
+│   ├── _default/
+│   │   ├── baseof.html      # Base template
+│   │   ├── list.html        # List pages
+│   │   ├── single.html      # Single post
+│   │   └── index.json       # Search index
+│   ├── partials/
+│   │   ├── head.html        # Meta tags
+│   │   ├── header.html      # Site header
+│   │   ├── footer.html      # Site footer
+│   │   ├── post-card.html   # Post preview card
+│   │   ├── sidebar-tags.html # Tag sidebar
+│   │   ├── social-icons.html # Social icons
+│   │   └── comments.html    # Giscus comments
+│   └── index.html           # Home page
+├── assets/
+│   ├── css/
+│   │   └── main.css         # Styles
+│   └── js/
+│       └── search.js        # Search functionality
+└── static/
 ```
 
-## 🎨 Customization
+## License
 
-### Change Settings
+MIT
 
-`config.toml` file to change the site settings:
+## Credits
 
-```toml
-baseURL = "https://your-username.github.io/"
-title = "Your Blog Title"
-
-[params]
-  author = "Your Name"
-  description = "Your blog description"
-```
-
-### Modify Style
-
-`static/css/style.css` to modify the design.
-
-## 🚢 Deployment
-
-### GitHub Actions automatically deploy
-
-`main` branch push, GitHub Actions automatically build and deploy.
-
-### GitHub Pages Settings
-
-1. GitHub Repository Settings → Pages
-2. Source: "GitHub Actions" Select
-3. Save
-
-## 📝 Development Workflow
-
-1. Run `hugo server -D` locally
-2. Write markdown file in `content/posts/`
-3. Preview and test locally
-4. Git commit and push
-5. GitHub Actions automatically deploy
+Built with [Hugo](https://gohugo.io/)

@@ -1,0 +1,35 @@
+{{- if not .Params.disableComments }}
+<div class="comments-section">
+    <h3>Comments</h3>
+
+    {{- /* Giscus Configuration Placeholder */}}
+    {{- if .Site.Params.giscus.repo }}
+    <script src="https://giscus.app/client.js"
+        data-repo="{{ .Site.Params.giscus.repo }}"
+        data-repo-id="{{ .Site.Params.giscus.repoId }}"
+        data-category="{{ .Site.Params.giscus.category | default "General" }}"
+        data-category-id="{{ .Site.Params.giscus.categoryId }}"
+        data-mapping="{{ .Site.Params.giscus.mapping | default "pathname" }}"
+        data-strict="{{ .Site.Params.giscus.strict | default "0" }}"
+        data-reactions-enabled="{{ .Site.Params.giscus.reactionsEnabled | default "1" }}"
+        data-emit-metadata="{{ .Site.Params.giscus.emitMetadata | default "0" }}"
+        data-input-position="{{ .Site.Params.giscus.inputPosition | default "bottom" }}"
+        data-theme="{{ .Site.Params.giscus.theme | default "light" }}"
+        data-lang="{{ .Site.Params.giscus.lang | default "en" }}"
+        crossorigin="anonymous"
+        async>
+    </script>
+    {{- else }}
+    <div class="comments-placeholder">
+        <p>Comments are powered by Giscus. To enable comments:</p>
+        <ol>
+            <li>Create a public GitHub repository for discussions</li>
+            <li>Enable Discussions in your repository settings</li>
+            <li>Install the <a href="https://github.com/apps/giscus" target="_blank" rel="noopener">Giscus app</a></li>
+            <li>Visit <a href="https://giscus.app" target="_blank" rel="noopener">giscus.app</a> to generate your configuration</li>
+            <li>Add the configuration to your <code>config.toml</code> under <code>[params.giscus]</code></li>
+        </ol>
+    </div>
+    {{- end }}
+</div>
+{{- end }}

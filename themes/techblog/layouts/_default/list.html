@@ -1,0 +1,21 @@
+{{- define "main" }}
+<div class="list-page">
+    <header class="list-header">
+        <h1>{{ .Title }}</h1>
+        {{- if .Description }}
+        <p class="list-description">{{ .Description }}</p>
+        {{- end }}
+        <p class="list-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}</p>
+    </header>
+
+    <div class="posts-timeline">
+        {{- range .Pages }}
+            {{- partial "post-card.html" . }}
+        {{- else }}
+        <div class="no-posts">
+            <p>No posts found.</p>
+        </div>
+        {{- end }}
+    </div>
+</div>
+{{- end }}

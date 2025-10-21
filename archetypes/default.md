@@ -2,9 +2,9 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-tags: []
-categories: []
 description: ""
+image: ""
+tags: []
 ---
 
-
+Write your post content here...

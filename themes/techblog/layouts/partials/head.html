@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{{- if .IsHome }}
+<title>{{ .Site.Title }}</title>
+<meta name="description" content="{{ .Site.Params.description }}">
+{{- else }}
+<title>{{ .Title }} - {{ .Site.Title }}</title>
+<meta name="description" content="{{ .Description | default .Summary | plainify | truncate 160 }}">
+{{- end }}
+
+<meta name="author" content="{{ .Site.Params.author | default .Site.Title }}">
+
+{{- /* RSS Feed */}}
+{{ with .OutputFormats.Get "rss" -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title }}">
+{{- end }}
+
+{{- /* Favicon */}}
+<link rel="icon" href="{{ "favicon.ico" | absURL }}">
+
+{{- /* CSS */}}
+{{ $css := resources.Get "css/main.css" }}
+{{ if $css }}
+{{ $style := $css | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ end }}
+
+{{- /* Open Graph */}}
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ .Description | default .Summary | default .Site.Params.description | plainify | truncate 160 }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{- with .Params.image }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{- end }}
+
+{{- /* Twitter Card */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ .Description | default .Summary | default .Site.Params.description | plainify | truncate 160 }}">
+{{- with .Params.image }}
+<meta name="twitter:image" content="{{ . | absURL }}">
+{{- end }}

@@ -1,127 +1,79 @@
-baseURL = "https://unsafe9.github.io/"
-languageCode = "en-us"
-title = "unsafe9's Tech Blog"
-theme = "PaperMod"
-enableRobotsTXT = true
-enableEmoji = true
-buildDrafts = false
-buildFuture = false
-buildExpired = false
+baseURL = 'https://unsafe9.github.io/'
+languageCode = 'en-us'
+title = 'Tech Blog'
+theme = 'techblog'
 
+# Enable emoji support
+enableEmoji = true
+
+# Pagination
 [pagination]
   pagerSize = 10
 
-[minify]
-  disableXML = true
-  minifyOutput = true
-
-[params]
-  env = "production"
-  title = "unsafe9's Tech Blog"
-  description = "Tech Blog - Documenting thoughts on development and technology"
-  author = "unsafe9"
-  
-  # Theme settings
-  defaultTheme = "auto" # auto, light, dark
-  disableThemeToggle = false
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
-  disableSpecial1stPost = false
-  disableScrollToTop = false
-  comments = true
-  hidemeta = false
-  hideSummary = false
-  showtoc = true
-  tocopen = false
-
-  [params.assets]
-    favicon = "/favicon.ico"
-    favicon16x16 = "/favicon.ico"
-    favicon32x32 = "/favicon.ico"
-    apple_touch_icon = "/favicon.ico"
-
-  # Home page mode - show home info instead of posts list
-  homeInfoEnabled = true
-  
-  # Home page settings
-  [params.homeInfoParams]
-    Title = "Welcome to unsafe9's Tech Blog 👋"
-    Content = "A blog about development and technology. Sharing knowledge and experiences."
-    ProfileImage = "https://github.com/unsafe9.png"
-
-  # Social icons
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/unsafe9"
-
-  [[params.socialIcons]]
-    name = "linkedin"
-    url = "https://www.linkedin.com/in/wooseok-han-479320204"
-
-  [[params.socialIcons]]
-    name = "email"
-    url = "mailto:realkorokke@outlook.com"
-
-  # Comments settings (https://giscus.app)
-  [params.giscus]
-    repo = "unsafe9/unsafe9.github.io"
-    repoID = "R_kgDOQBWLlg"
-    category = "General"
-    categoryID = "DIC_kwDOQBWLls4CwnP9"
-    mapping = "pathname"
-    reactionsEnabled = "1"
-    emitMetadata = "0"
-    inputPosition = "bottom"
-    theme = "preferred_color_scheme"
-    lang = "ko"
-    loading = "lazy"
-
-  # Search settings
-  [params.fuseOpts]
-    isCaseSensitive = false
-    shouldSort = true
-    location = 0
-    distance = 1000
-    threshold = 0.4
-    minMatchCharLength = 0
-    keys = ["title", "permalink", "summary", "content"]
-
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-
+# Syntax highlighting
 [markup]
   [markup.highlight]
-    anchorLineNos = false
-    codeFences = true
-    guessSyntax = false
+    style = 'monokai'
     lineNos = true
+    lineNumbersInTable = false
     noClasses = false
-    style = "monokai"
 
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
 
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+# Taxonomies
+[taxonomies]
+  tag = 'tags'
 
-[menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
-  
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
-    weight = 2
- 
+# Output formats
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+  page = ['HTML']
+  section = ['HTML', 'RSS']
+
+# RSS Configuration
+[outputFormats]
+  [outputFormats.RSS]
+    mediatype = "application/rss+xml"
+    baseName = "feed"
+
+# Site Parameters
+[params]
+  description = 'A personal tech blog about software development and technology'
+  author = 'unsafe9'
+
+  # Profile icon (add your profile image to static/images/profile.png)
+  profileIcon = '/images/profile.png'
+
+  # Social links
+  [params.social]
+    github = 'https://github.com/unsafe9'
+    linkedin = 'https://linkedin.com/in/yourprofile'
+    email = 'mailto:your@email.com'
+
+  # Giscus comments configuration (optional - configure later)
+  # Visit https://giscus.app to generate your configuration
+  # [params.giscus]
+  #   repo = 'your-username/your-repo'
+  #   repoId = 'your-repo-id'
+  #   category = 'General'
+  #   categoryId = 'your-category-id'
+  #   mapping = 'pathname'
+  #   strict = '0'
+  #   reactionsEnabled = '1'
+  #   emitMetadata = '0'
+  #   inputPosition = 'bottom'
+  #   theme = 'light'
+  #   lang = 'en'
+
+# Menu configuration (optional)
+# [menu]
+#   [[menu.main]]
+#     name = 'Home'
+#     url = '/'
+#     weight = 1
+#   [[menu.main]]
+#     name = 'Tags'
+#     url = '/tags/'
+#     weight = 2

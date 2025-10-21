@@ -1,0 +1,12 @@
+<footer class="footer">
+    <div class="footer-container">
+        <p>
+            Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
+        </p>
+    </div>
+</footer>
+
+{{- /* Search JavaScript - only load on home page */}}
+{{- if .IsHome }}
+<script src="{{ "js/search.js" | absURL }}"></script>
+{{- end }}

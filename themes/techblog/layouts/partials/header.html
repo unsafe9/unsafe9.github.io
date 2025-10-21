@@ -1,0 +1,28 @@
+<header class="header">
+    <div class="header-container">
+        <div class="header-left">
+            <a href="{{ "/" | absURL }}" class="logo">
+                {{- if .Site.Params.profileIcon }}
+                <img src="{{ .Site.Params.profileIcon | absURL }}" alt="{{ .Site.Title }}" class="profile-icon">
+                {{- end }}
+                <span class="site-title">{{ .Site.Title }}</span>
+            </a>
+        </div>
+
+        <div class="header-right">
+            {{- /* RSS Button */}}
+            {{ with .OutputFormats.Get "rss" -}}
+            <a href="{{ .Permalink }}" class="icon-button" title="RSS Feed" aria-label="RSS Feed">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                    <path d="M4 11a9 9 0 0 1 9 9"/>
+                    <path d="M4 4a16 16 0 0 1 16 16"/>
+                    <circle cx="5" cy="19" r="1"/>
+                </svg>
+            </a>
+            {{- end }}
+
+            {{- /* Social Icons */}}
+            {{- partial "social-icons.html" . -}}
+        </div>
+    </div>
+</header>
