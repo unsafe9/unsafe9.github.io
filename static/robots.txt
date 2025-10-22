@@ -1,15 +1,6 @@
 # robots.txt for unsafe9.github.io
 # Generated on 2025-10-22
 
-# Allow well-behaved search engines
-User-agent: Googlebot
-User-agent: Bingbot
-User-agent: Slurp
-User-agent: DuckDuckBot
-User-agent: Baiduspider
-User-agent: YandexBot
-Allow: /
-
 # Block AI crawlers and scrapers
 # OpenAI
 User-agent: GPTBot
