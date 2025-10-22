@@ -20,11 +20,7 @@
         {{- end }}
     </header>
 
-    {{- if .Params.image }}
-    <div class="post-featured-image">
-        <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
-    </div>
-    {{- end }}
+    {{- partial "toc.html" . }}
 
     <div class="post-content">
         {{ .Content }}

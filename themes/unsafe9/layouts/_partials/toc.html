@@ -1,0 +1,10 @@
+{{- if .Params.toc }}
+<aside class="toc">
+    <div class="toc-header">
+        <h2>Table of Contents</h2>
+    </div>
+    <nav class="toc-nav">
+        {{ .TableOfContents }}
+    </nav>
+</aside>
+{{- end }}

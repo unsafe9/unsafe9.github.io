@@ -363,6 +363,54 @@ main.container {
     color: var(--text-light);
 }
 
+/* ===== Table of Contents ===== */
+.toc {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.toc-header h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    color: var(--text-color);
+}
+
+.toc-nav nav {
+    font-size: 0.9rem;
+}
+
+.toc-nav nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.toc-nav nav ul ul {
+    padding-left: 1rem;
+    margin-top: 0.25rem;
+}
+
+.toc-nav nav li {
+    margin-bottom: 0.4rem;
+}
+
+.toc-nav nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+    line-height: 1.4;
+}
+
+.toc-nav nav a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
 /* ===== Comments ===== */
 .comments-section {
     margin-top: 4rem;
