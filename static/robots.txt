@@ -1,0 +1,120 @@
+# robots.txt for unsafe9.github.io
+# Generated on 2025-10-22
+
+# Allow well-behaved search engines
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Slurp
+User-agent: DuckDuckBot
+User-agent: Baiduspider
+User-agent: YandexBot
+Allow: /
+
+# Block AI crawlers and scrapers
+# OpenAI
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+Disallow: /
+
+# Anthropic (Claude)
+User-agent: anthropic-ai
+User-agent: Claude-Web
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+Disallow: /
+
+# Common Crawl
+User-agent: CCBot
+Disallow: /
+
+# Google AI
+User-agent: Google-Extended
+User-agent: GoogleOther
+User-agent: GoogleOther-Image
+User-agent: GoogleOther-Video
+User-agent: Google-CloudVertexBot
+User-agent: GoogleAgent-Mariner
+User-agent: Gemini-Deep-Research
+Disallow: /
+
+# Meta/Facebook AI
+User-agent: FacebookBot
+User-agent: facebookexternalhit
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+User-agent: meta-externalagent
+User-agent: meta-externalfetcher
+Disallow: /
+
+# Perplexity
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Disallow: /
+
+# Cohere
+User-agent: cohere-ai
+User-agent: cohere-training-data-crawler
+Disallow: /
+
+# Mistral
+User-agent: MistralAI-User
+User-agent: MistralAI-User/1.0
+Disallow: /
+
+# Apple
+User-agent: Applebot
+User-agent: Applebot-Extended
+Disallow: /
+
+# Amazon
+User-agent: Amazonbot
+User-agent: bedrockbot
+Disallow: /
+
+# ByteDance/TikTok
+User-agent: Bytespider
+User-agent: TikTokSpider
+Disallow: /
+
+# Other AI crawlers
+User-agent: AI2Bot
+User-agent: Ai2Bot-Dolma
+User-agent: aiHitBot
+User-agent: Andibot
+User-agent: Awario
+User-agent: Brightbot
+User-agent: Cotoyogi
+User-agent: Crawlspace
+User-agent: Devin
+User-agent: Diffbot
+User-agent: DuckAssistBot
+User-agent: FirecrawlAgent
+User-agent: FriendlyCrawler
+User-agent: ICC-Crawler
+User-agent: ImagesiftBot
+User-agent: img2dataset
+User-agent: ISSCyberRiskCrawler
+User-agent: omgili
+User-agent: omgilibot
+User-agent: Operator
+User-agent: PanguBot
+User-agent: Panscient
+User-agent: PetalBot
+User-agent: PhindBot
+User-agent: QualifiedBot
+User-agent: QuillBot
+User-agent: Scrapy
+User-agent: SemrushBot-OCOB
+User-agent: SemrushBot-SWA
+User-agent: Thinkbot
+User-agent: Timpibot
+User-agent: VelenPublicWebCrawler
+User-agent: Webzio-Extended
+User-agent: YouBot
+User-agent: iaskspider/2.0
+Disallow: /
+
+# Sitemap location
+Sitemap: https://unsafe9.github.io/sitemap.xml

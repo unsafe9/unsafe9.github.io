@@ -1,0 +1,37 @@
+# unsafe9
+
+> A tech blog about software development, technology, and engineering insights by unsafe9
+
+## About
+
+This is a personal technical blog focused on software development, system design, and technology exploration. The blog uses Hugo static site generator with a custom theme.
+
+## Key Sections
+
+- [Blog Posts](/posts/) - Technical articles and tutorials
+- [Tags](/tags/) - Browse posts by topic
+- [RSS Feed](/feed.xml) - Subscribe to updates
+
+## About the Author
+
+unsafe9 is a software developer passionate about clean code, system architecture, and sharing technical knowledge.
+
+- GitHub: https://github.com/unsafe9
+- LinkedIn: https://www.linkedin.com/in/wooseok-han-479320204
+- Email: rhfhzp001@gmail.com
+
+## Technology Stack
+
+This blog is built with:
+- Hugo v0.151.0+ (Static Site Generator)
+- Custom "unsafe9" theme
+- GitHub Pages for hosting
+- Giscus for comments
+
+## Content Policy
+
+The content on this blog is primarily for educational and informational purposes. All code examples and technical content are provided as-is for learning and reference.
+
+---
+
+*This llms.txt file follows the proposed standard for LLM-friendly content discovery. For more information about the format, visit https://llmstxt.org/*
