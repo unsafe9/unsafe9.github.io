@@ -17,7 +17,7 @@ I'm a backend engineer working in the gaming industry. My expertise spans across
 
 My work focuses on several key areas. I design and implement APIs, whether they're REST APIs or gRPC services, ensuring they're robust and well-structured. Database schema design is another critical part of my work, where I model data across both relational databases and NoSQL systems depending on the use case.
 
-I specialize in microservices architecture, designing scalable distributed systems that can handle the demands of modern gaming platforms. Cloud infrastructure and Infrastructure as Code are essential parts of my daily work, managing cloud resources and automating infrastructure provisioning to maintain reliable and efficient deployments.
+I specialize in microservices architecture, designing scalable distributed systems that can handle the demands of modern gaming platforms. Cloud infrastructure and Infrastructure as Code are also parts of my skills, managing cloud resources and automating infrastructure provisioning to maintain reliable and efficient deployments.
 
 ## Current Focus
 

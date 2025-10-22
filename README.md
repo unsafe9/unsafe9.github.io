@@ -26,6 +26,18 @@ git commit -m "Add new post"
 git push
 ```
 
+## IDE Setup Recommendations
+
+### JetBrains
+
+**Enable Soft Wrap:**
+1. Go to `Settings` > `Editor` > `General`
+2. Set `Soft Wraps` > `Soft-wrap these files:` to `*.md`
+
+**Disable Hard Wrap:**
+1. Go to `Settings` > `Editor` > `Code Style` > `Markdown`
+2. Disable `Wrap long text`
+
 ## Features
 
 - Clean, minimal design
