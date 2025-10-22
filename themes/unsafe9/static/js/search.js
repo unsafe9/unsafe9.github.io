@@ -31,6 +31,11 @@
             allPosts.forEach(post => {
                 post.element.style.display = '';
             });
+            // Remove "no results" message if it exists
+            const noResultsMsg = postsTimeline.querySelector('.no-results');
+            if (noResultsMsg) {
+                noResultsMsg.remove();
+            }
             return;
         }
 

@@ -148,6 +148,7 @@ main.container {
     border: 1px solid var(--border-color);
     border-radius: 3px;
     background-color: var(--bg-color);
+    color: var(--text-color);
     transition: var(--transition);
 }
 
