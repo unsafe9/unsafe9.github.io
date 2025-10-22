@@ -1,0 +1,23 @@
+{{- define "main" }}
+<div class="list-page">
+    <header class="list-header">
+        <h1>{{ .Title }}</h1>
+        <p class="list-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}tag{{ else }}tags{{ end }}</p>
+    </header>
+
+    <div class="tags-list">
+        {{- range .Pages.ByTitle }}
+        <div class="tag-item">
+            <a href="{{ .RelPermalink }}" class="tag-link">
+                <span class="tag-name">{{ .Title }}</span>
+                <span class="tag-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}</span>
+            </a>
+        </div>
+        {{- else }}
+        <div class="no-tags">
+            <p>No tags found.</p>
+        </div>
+        {{- end }}
+    </div>
+</div>
+{{- end }}
