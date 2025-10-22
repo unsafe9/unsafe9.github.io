@@ -2,22 +2,73 @@
 <div class="comments-section">
     <h3>Comments</h3>
 
-    {{- /* Giscus Configuration Placeholder */}}
+    {{- /* Giscus Configuration */}}
     {{- if .Site.Params.giscus.repo }}
-    <script src="https://giscus.app/client.js"
-        data-repo="{{ .Site.Params.giscus.repo }}"
-        data-repo-id="{{ .Site.Params.giscus.repoId }}"
-        data-category="{{ .Site.Params.giscus.category | default "General" }}"
-        data-category-id="{{ .Site.Params.giscus.categoryId }}"
-        data-mapping="{{ .Site.Params.giscus.mapping | default "pathname" }}"
-        data-strict="{{ .Site.Params.giscus.strict | default "0" }}"
-        data-reactions-enabled="{{ .Site.Params.giscus.reactionsEnabled | default "1" }}"
-        data-emit-metadata="{{ .Site.Params.giscus.emitMetadata | default "0" }}"
-        data-input-position="{{ .Site.Params.giscus.inputPosition | default "bottom" }}"
-        data-theme="preferred_color_scheme"
-        data-lang="{{ .Site.Params.giscus.lang | default "en" }}"
-        crossorigin="anonymous"
-        async>
+    <div class="giscus"></div>
+    <script>
+      function loadGiscus() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+
+        // Use HTTPS URLs for production (GitHub Pages) and built-in themes for local development
+        const isProduction = window.location.hostname !== 'localhost';
+        const giscusTheme = isDark
+          ? (isProduction ? '{{ absURL "giscus-dark.css" }}?v=6' : 'dark')
+          : (isProduction ? '{{ absURL "giscus-light.css" }}?v=6' : 'light');
+
+        const script = document.createElement('script');
+        script.src = 'https://giscus.app/client.js';
+        script.setAttribute('data-repo', '{{ .Site.Params.giscus.repo }}');
+        script.setAttribute('data-repo-id', '{{ .Site.Params.giscus.repoId }}');
+        script.setAttribute('data-category', '{{ .Site.Params.giscus.category | default "General" }}');
+        script.setAttribute('data-category-id', '{{ .Site.Params.giscus.categoryId }}');
+        script.setAttribute('data-mapping', '{{ .Site.Params.giscus.mapping | default "pathname" }}');
+        script.setAttribute('data-strict', '{{ .Site.Params.giscus.strict | default "0" }}');
+        script.setAttribute('data-reactions-enabled', '{{ .Site.Params.giscus.reactionsEnabled | default "1" }}');
+        script.setAttribute('data-emit-metadata', '{{ .Site.Params.giscus.emitMetadata | default "0" }}');
+        script.setAttribute('data-input-position', '{{ .Site.Params.giscus.inputPosition | default "bottom" }}');
+        script.setAttribute('data-theme', giscusTheme);
+        script.setAttribute('data-lang', '{{ .Site.Params.giscus.lang | default "en" }}');
+        script.setAttribute('crossorigin', 'anonymous');
+        script.async = true;
+
+        document.querySelector('.giscus').appendChild(script);
+      }
+
+      // Load Giscus on page load
+      loadGiscus();
+
+      // Update Giscus theme when site theme changes
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.attributeName === 'data-theme') {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const isProduction = window.location.hostname !== 'localhost';
+            const theme = isDark
+              ? (isProduction ? '{{ absURL "giscus-dark.css" }}?v=6' : 'dark')
+              : (isProduction ? '{{ absURL "giscus-light.css" }}?v=6' : 'light');
+
+            // Wait for iframe to be ready
+            const checkIframe = setInterval(() => {
+              const iframe = document.querySelector('iframe.giscus-frame');
+              if (iframe && iframe.contentWindow) {
+                iframe.contentWindow.postMessage(
+                  { giscus: { setConfig: { theme } } },
+                  'https://giscus.app'
+                );
+                clearInterval(checkIframe);
+              }
+            }, 100);
+
+            // Clear interval after 5 seconds to prevent memory leaks
+            setTimeout(() => clearInterval(checkIframe), 5000);
+          }
+        });
+      });
+
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-theme']
+      });
     </script>
     {{- else }}
     <div class="comments-placeholder">

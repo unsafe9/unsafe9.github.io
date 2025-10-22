@@ -46,23 +46,22 @@ enableEmoji = true
 
   [params.social]
     github = 'https://github.com/unsafe9'
-    linkedin = 'https://linkedin.com/in/wooseokhan'
+    linkedin = 'https://www.linkedin.com/in/wooseok-han-479320204'
     email = 'mailto:rhfhzp001@gmail.com'
 
-  # Giscus comments configuration (optional - configure later)
-  # Visit https://giscus.app to generate your configuration
-  # [params.giscus]
-  #   repo = 'your-username/your-repo'
-  #   repoId = 'your-repo-id'
-  #   category = 'General'
-  #   categoryId = 'your-category-id'
-  #   mapping = 'pathname'
-  #   strict = '0'
-  #   reactionsEnabled = '1'
-  #   emitMetadata = '0'
-  #   inputPosition = 'bottom'
-  #   theme = 'light'
-  #   lang = 'en'
+  # Giscus comments configuration
+  [params.giscus]
+    repo = 'unsafe9/unsafe9.github.io'
+    repoId = 'R_kgDOQBWLlg'
+    category = 'Comment'
+    categoryId = 'DIC_kwDOQBWLls4CwnP9'
+    mapping = 'pathname'
+    strict = '0'
+    reactionsEnabled = '1'
+    emitMetadata = '0'
+    inputPosition = 'top'
+    theme = 'transparent_dark'
+    lang = 'en'
 
 # Menu configuration (optional)
 # [menu]

@@ -401,6 +401,17 @@ main.container {
     font-size: 0.9em;
 }
 
+/* Giscus custom styling to match theme */
+.giscus,
+.giscus-frame {
+    width: 100%;
+}
+
+.giscus-frame {
+    border: none;
+    color-scheme: auto;
+}
+
 /* ===== List Page ===== */
 .list-header {
     margin-bottom: 2rem;
