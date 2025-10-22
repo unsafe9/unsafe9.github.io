@@ -15,6 +15,9 @@ Thumbs.db
 *.swo
 *~
 
+# Claude Code
+.claude/
+
 # npm
 node_modules/
 package-lock.json

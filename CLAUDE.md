@@ -60,15 +60,6 @@ Hugo v0.151.0+extended static blog with custom "unsafe9" theme. Clean, minimal d
 {{ end }}
 ```
 
-## File Structure
-```
-themes/unsafe9/layouts/
-├── _partials/           # Components (underscore required)
-├── home.html            # Homepage
-├── single.html          # Post page
-└── list.html            # List pages
-```
-
 ## Context7 Integration
 For Hugo docs: Use Context7 with `/gohugoio/hugodocs` (9.1 trust, 2151+ snippets)
 
@@ -85,8 +76,9 @@ See config.toml
 **Add new feature:**
 1. Use Context7 for Hugo docs if needed
 2. Modify templates in `themes/unsafe9/layouts/`
-3. Test with `hugo server`
-4. Commit with `[feature]` prefix
+3. Use Chrome DevTools to check it looks good
+4. Test with `hugo server` (If the server is already running, skip this step)
+5. Commit with `[feature]` prefix
 
 **Fix template issues:**
 1. Check layout structure in Project Overview

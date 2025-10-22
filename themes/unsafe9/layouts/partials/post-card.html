@@ -1,33 +1,28 @@
 <article class="post-card">
     <a href="{{ .Permalink }}" class="post-card-link">
-        {{- if .Params.image }}
         <div class="post-card-image">
-            <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" loading="lazy">
+            {{- $image := .Params.image | default "/images/default-post.svg" }}
+            <img src="{{ $image | absURL }}" alt="{{ .Title }}" loading="lazy">
         </div>
-        {{- end }}
 
         <div class="post-card-content">
             <h2 class="post-card-title">{{ .Title }}</h2>
 
             <div class="post-card-meta">
                 <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                    {{ .Date.Format "January 2, 2006" }}
+                    {{ .Date.Format "2006-01-02" }}
                 </time>
                 <span class="separator">•</span>
-                <span class="reading-time">{{ .ReadingTime }} min read</span>
-            </div>
-
-            <p class="post-card-summary">
-                {{ .Summary | plainify | truncate 150 }}
-            </p>
-
-            {{- if .Params.tags }}
-            <div class="post-card-tags">
-                {{- range .Params.tags }}
-                <span class="tag">{{ . }}</span>
+                <span class="reading-time">{{ .ReadingTime }} min</span>
+                {{- if .Params.tags }}
+                <span class="separator">•</span>
+                <div class="post-card-tags">
+                    {{- range .Params.tags }}
+                    <span class="tag">{{ . }}</span>
+                    {{- end }}
+                </div>
                 {{- end }}
             </div>
-            {{- end }}
         </div>
     </a>
 </article>

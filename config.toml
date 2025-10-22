@@ -28,7 +28,7 @@ enableEmoji = true
 
 # Output formats
 [outputs]
-  home = ['HTML', 'RSS', 'JSON']
+  home = ['HTML', 'RSS']
   page = ['HTML']
   section = ['HTML', 'RSS']
 
@@ -47,7 +47,7 @@ enableEmoji = true
   [params.social]
     github = 'https://github.com/unsafe9'
     linkedin = 'https://linkedin.com/in/wooseokhan'
-    email = 'mailto:your@email.com'
+    email = 'mailto:rhfhzp001@gmail.com'
 
   # Giscus comments configuration (optional - configure later)
   # Visit https://giscus.app to generate your configuration

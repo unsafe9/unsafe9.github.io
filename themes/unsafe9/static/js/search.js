@@ -11,7 +11,7 @@
     // Extract post data from DOM
     postCards.forEach(card => {
         const title = card.querySelector('.post-card-title')?.textContent || '';
-        const summary = card.querySelector('.post-card-summary')?.textContent || '';
+        // Note: Summary not included in post cards, only title and tags are searchable
         const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent);
 
         allPosts.push({
