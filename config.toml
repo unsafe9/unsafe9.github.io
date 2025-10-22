@@ -40,14 +40,13 @@ enableEmoji = true
 
 # Site Parameters
 [params]
-  description = 'A personal tech blog about software development and technology'
+  description = 'A tech blog about software development and technology'
   author = 'unsafe9'
   profileIcon = 'https://github.com/unsafe9.png'
 
-  # Social links
   [params.social]
     github = 'https://github.com/unsafe9'
-    linkedin = 'https://linkedin.com/in/yourprofile'
+    linkedin = 'https://linkedin.com/in/wooseokhan'
     email = 'mailto:your@email.com'
 
   # Giscus comments configuration (optional - configure later)
