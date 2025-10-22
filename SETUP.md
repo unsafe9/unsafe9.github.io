@@ -2,7 +2,7 @@
 
 ## ✅ Completed Features
 
-### 1. Theme Structure (themes/techblog/)
+### 1. Theme Structure (themes/unsafe9/)
 - ✅ Standalone custom theme
 - ✅ Clean, minimal design inspired by PaperMod
 - ✅ Fully responsive layout
@@ -51,7 +51,7 @@ unsafe9.github.io/
 │       └── welcome-to-my-blog.md # Example post
 ├── static/
 │   └── images/                  # For profile icon, post images
-├── themes/techblog/
+├── themes/unsafe9/
 │   ├── layouts/
 │   │   ├── _default/
 │   │   │   ├── baseof.html      # Base template
@@ -139,13 +139,13 @@ GitHub Actions will automatically build and deploy!
 - **Configuration**: `config.toml`
 - **Posts**: `content/posts/`
 - **Images**: `static/images/`
-- **Theme files**: `themes/techblog/`
+- **Theme files**: `themes/unsafe9/`
 - **Built site**: `public/` (auto-generated)
 
 ## 🎨 Customization
 
 ### Change Colors
-Edit `themes/techblog/assets/css/main.css`:
+Edit `themes/unsafe9/assets/css/main.css`:
 ```css
 :root {
     --primary-color: #2563eb;  /* Change this */
@@ -155,12 +155,12 @@ Edit `themes/techblog/assets/css/main.css`:
 ```
 
 ### Add More Social Icons
-Edit `themes/techblog/layouts/partials/social-icons.html`
+Edit `themes/unsafe9/layouts/partials/social-icons.html`
 
 ### Modify Layout
-- Home page: `themes/techblog/layouts/index.html`
-- Post page: `themes/techblog/layouts/_default/single.html`
-- Header: `themes/techblog/layouts/partials/header.html`
+- Home page: `themes/unsafe9/layouts/index.html`
+- Post page: `themes/unsafe9/layouts/_default/single.html`
+- Header: `themes/unsafe9/layouts/partials/header.html`
 
 ## ✨ Features Checklist
 

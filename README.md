@@ -96,7 +96,7 @@ The built site will be in the `public/` directory.
 ## Theme Structure
 
 ```
-themes/techblog/
+themes/unsafe9/
 ├── layouts/
 │   ├── _default/
 │   │   ├── baseof.html      # Base template

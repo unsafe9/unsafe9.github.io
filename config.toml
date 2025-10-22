@@ -1,7 +1,7 @@
 baseURL = 'https://unsafe9.github.io/'
 languageCode = 'en-us'
-title = 'Tech Blog'
-theme = 'techblog'
+title = 'unsafe9'
+theme = 'unsafe9'
 
 # Enable emoji support
 enableEmoji = true
@@ -42,9 +42,7 @@ enableEmoji = true
 [params]
   description = 'A personal tech blog about software development and technology'
   author = 'unsafe9'
-
-  # Profile icon (add your profile image to static/images/profile.png)
-  profileIcon = '/images/profile.png'
+  profileIcon = 'https://github.com/unsafe9.png'
 
   # Social links
   [params.social]
