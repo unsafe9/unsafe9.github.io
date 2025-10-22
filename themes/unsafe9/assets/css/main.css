@@ -506,16 +506,6 @@ main.container {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 768px) {
-    .home-top-section {
-        flex-direction: column;
-    }
-
-    .home-right-section {
-        width: 100%;
-    }
-}
-
 @media (max-width: 640px) {
     body {
         font-size: 13px;

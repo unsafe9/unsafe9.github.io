@@ -17,9 +17,8 @@
         allPosts.push({
             element: card,
             title: title.toLowerCase(),
-            summary: summary.toLowerCase(),
             tags: tags.map(t => t.toLowerCase()),
-            searchableText: (title + ' ' + summary + ' ' + tags.join(' ')).toLowerCase()
+            searchableText: (title + ' ' + tags.join(' ')).toLowerCase()
         });
     });
 

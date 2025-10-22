@@ -10,7 +10,7 @@
         <div class="tag-item">
             <a href="{{ .RelPermalink }}" class="tag-link">
                 <span class="tag-name">{{ .Title }}</span>
-                <span class="tag-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}</span>
+                <span class="tag-count">{{ len .Pages }}</span>
             </a>
         </div>
         {{- else }}
