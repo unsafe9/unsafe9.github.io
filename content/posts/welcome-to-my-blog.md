@@ -2,41 +2,25 @@
 title: "Welcome to My Tech Blog"
 date: 2025-10-21T10:00:00-07:00
 draft: false
-description: "Welcome to my new tech blog built with Hugo and deployed on GitHub Pages"
-image: ""
-tags: ["hugo", "blogging", "web-development"]
+description: "Introduction to my tech blog - backend engineering, Go, cloud infrastructure, and AI agents"
+image: "https://github.com/unsafe9.png"
+tags: ["about"]
 ---
 
-Welcome to my tech blog! This is the first post on this newly created blog built with Hugo, a fast and flexible static site generator.
+Hello! Welcome to my tech blog.
 
-## Features
+<img src="https://github.com/unsafe9.png" alt="Profile" width="120" style="border-radius: 50%;">
 
-This blog includes several great features:
+## About Me
 
-- **Clean, minimal design** - Easy to read and navigate
-- **Fast search** - Find posts quickly with the search bar
-- **Tag system** - Browse posts by topic
-- **RSS feed** - Subscribe to stay updated
-- **Comments** - Powered by Giscus (once configured)
-- **Reading time** - Know how long each post takes to read
+I'm a backend engineer working in the gaming industry. My expertise spans across building high-performance backend services, primarily using Go, though I'm not stuck to any specific language. I believe in using whatever tools and technologies are best suited to implement the goals at hand.
 
-## About This Blog
+My work focuses on several key areas. I design and implement APIs, whether they're REST APIs or gRPC services, ensuring they're robust and well-structured. Database schema design is another critical part of my work, where I model data across both relational databases and NoSQL systems depending on the use case.
 
-This blog is built using:
+I specialize in microservices architecture, designing scalable distributed systems that can handle the demands of modern gaming platforms. Cloud infrastructure and Infrastructure as Code are essential parts of my daily work, managing cloud resources and automating infrastructure provisioning to maintain reliable and efficient deployments.
 
-- **Hugo** - The world's fastest framework for building websites
-- **Custom Theme** - A clean, minimal theme designed for tech blogging
-- **GitHub Pages** - Free hosting for static websites
-- **Giscus** - GitHub Discussions-powered comments
+## Current Focus
 
-## What's Next?
+Recently, my interests have shifted toward productivity and automation. I've been exploring productivity enhancement tools and diving deep into AI agents. The field of multi-agent application building particularly fascinates me, as it represents a new frontier in how we can automate complex workflows and build intelligent systems. Developer workflow optimization has become a personal mission, as I believe small improvements in our daily tools can compound into significant productivity gains.
 
-I'll be writing about various tech topics including:
-
-- Software development
-- Web technologies
-- Programming tutorials
-- Tech tips and tricks
-- And more!
-
-Stay tuned for more content!
+Thanks for visiting, and I hope you find something useful here!
