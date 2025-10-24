@@ -9,6 +9,7 @@
     --primary-color: #0066cc;
     --text-color: #222222;
     --text-light: #666666;
+    --text-muted: #999999;
     --bg-color: #ffffff;
     --bg-secondary: #f5f5f5;
     --bg-footer: #fafafa;
@@ -22,6 +23,7 @@
     --primary-color: #4a9eff;
     --text-color: #e0e0e0;
     --text-light: #a0a0a0;
+    --text-muted: #666666;
     --bg-color: #1a1a1a;
     --bg-secondary: #2a2a2a;
     --bg-footer: #151515;
@@ -125,9 +127,20 @@ img {
     color: var(--text-color);
 }
 
+.menu-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
 .social-icons {
     display: flex;
     gap: 0.5rem;
+}
+
+.menu-splitter {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    user-select: none;
 }
 
 /* ===== Container ===== */

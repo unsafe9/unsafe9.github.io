@@ -5,7 +5,8 @@
 {{- /* Initial theme detection (prevents FOUC) - theme.js handles live updates */}}
 <script>
 (function() {
-    const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const userPref = localStorage.getItem('theme-preference');
+    const theme = userPref || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', theme);
 })();
 </script>
