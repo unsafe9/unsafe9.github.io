@@ -125,6 +125,12 @@ img {
     gap: 0.5rem;
 }
 
+.menu-splitter {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    user-select: none;
+}
+
 /* ===== Container ===== */
 main.container {
     max-width: var(--max-width);
