@@ -85,3 +85,18 @@ main .gsc-loading-image {
 .gsc-main {
   background-color: #ffffff !important;
 }
+
+/* Comment box and loading states */
+.gsc-comment-box,
+.gsc-comment-box-main,
+.gsc-comment-box-textarea,
+.gsc-timeline-item,
+.gsc-comment {
+  background-color: #ffffff !important;
+  border-color: #dddddd !important;
+}
+
+.gsc-comment-box-tabs,
+.gsc-comment-box-tab {
+  background-color: #f5f5f5 !important;
+}
