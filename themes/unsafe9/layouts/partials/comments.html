@@ -7,8 +7,6 @@
     <div class="giscus"></div>
     <script>
       (function() {
-        let giscusLoaded = false;
-
         function getGiscusTheme() {
           const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
           // Always use custom CSS for consistent theme
@@ -17,47 +15,49 @@
             : '{{ absURL "giscus-light.css" }}?v=6';
         }
 
-        function loadGiscus() {
-          const container = document.querySelector('.giscus');
-          if (!container) return;
+        function updateGiscusTheme() {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
 
-          // Clear existing content
-          container.innerHTML = '';
-
-          const script = document.createElement('script');
-          script.src = 'https://giscus.app/client.js';
-          script.setAttribute('data-repo', '{{ .Site.Params.giscus.repo }}');
-          script.setAttribute('data-repo-id', '{{ .Site.Params.giscus.repoId }}');
-          script.setAttribute('data-category', '{{ .Site.Params.giscus.category | default "General" }}');
-          script.setAttribute('data-category-id', '{{ .Site.Params.giscus.categoryId }}');
-          script.setAttribute('data-mapping', '{{ .Site.Params.giscus.mapping | default "pathname" }}');
-          script.setAttribute('data-strict', '{{ .Site.Params.giscus.strict | default "0" }}');
-          script.setAttribute('data-reactions-enabled', '{{ .Site.Params.giscus.reactionsEnabled | default "1" }}');
-          script.setAttribute('data-emit-metadata', '{{ .Site.Params.giscus.emitMetadata | default "0" }}');
-          script.setAttribute('data-input-position', '{{ .Site.Params.giscus.inputPosition | default "bottom" }}');
-          script.setAttribute('data-theme', getGiscusTheme());
-          script.setAttribute('data-lang', '{{ .Site.Params.giscus.lang | default "en" }}');
-          script.setAttribute('crossorigin', 'anonymous');
-          script.async = true;
-
-          container.appendChild(script);
-          giscusLoaded = true;
+          const theme = getGiscusTheme();
+          iframe.contentWindow.postMessage(
+            { giscus: { setConfig: { theme: theme } } },
+            'https://giscus.app'
+          );
         }
 
         // Load Giscus after theme is initialized
         document.addEventListener('DOMContentLoaded', () => {
           // Wait for theme.js to initialize
           setTimeout(() => {
-            loadGiscus();
+            const container = document.querySelector('.giscus');
+            if (!container) return;
+
+            const script = document.createElement('script');
+            script.src = 'https://giscus.app/client.js';
+            script.setAttribute('data-repo', '{{ .Site.Params.giscus.repo }}');
+            script.setAttribute('data-repo-id', '{{ .Site.Params.giscus.repoId }}');
+            script.setAttribute('data-category', '{{ .Site.Params.giscus.category | default "General" }}');
+            script.setAttribute('data-category-id', '{{ .Site.Params.giscus.categoryId }}');
+            script.setAttribute('data-mapping', '{{ .Site.Params.giscus.mapping | default "pathname" }}');
+            script.setAttribute('data-strict', '{{ .Site.Params.giscus.strict | default "0" }}');
+            script.setAttribute('data-reactions-enabled', '{{ .Site.Params.giscus.reactionsEnabled | default "1" }}');
+            script.setAttribute('data-emit-metadata', '{{ .Site.Params.giscus.emitMetadata | default "0" }}');
+            script.setAttribute('data-input-position', '{{ .Site.Params.giscus.inputPosition | default "bottom" }}');
+            script.setAttribute('data-theme', getGiscusTheme());
+            script.setAttribute('data-lang', '{{ .Site.Params.giscus.lang | default "en" }}');
+            script.setAttribute('crossorigin', 'anonymous');
+            script.async = true;
+
+            container.appendChild(script);
           }, 150);
         });
 
-        // Reload Giscus when site theme changes
+        // Update Giscus theme when site theme changes using postMessage
         const observer = new MutationObserver((mutations) => {
           mutations.forEach((mutation) => {
-            if (mutation.attributeName === 'data-theme' && giscusLoaded) {
-              // Reload Giscus with new theme
-              loadGiscus();
+            if (mutation.attributeName === 'data-theme') {
+              updateGiscusTheme();
             }
           });
         });
