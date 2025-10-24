@@ -71,3 +71,8 @@ main {
   --color-social-reaction-bg-hover: #f5f5f5;
   --color-social-reaction-bg-reacted-hover: #e6f2ff;
 }
+
+/* Direct background color overrides */
+.gsc-main {
+  background-color: #ffffff !important;
+}
