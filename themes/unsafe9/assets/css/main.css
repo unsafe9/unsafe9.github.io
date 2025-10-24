@@ -305,6 +305,7 @@ main.container {
 }
 
 .post-content {
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
     font-size: 0.95rem;
     line-height: 1.6;
 }
@@ -337,7 +338,7 @@ main.container {
     padding: 0.2rem 0.4rem;
     border-radius: 2px;
     font-size: 0.9em;
-    font-family: inherit;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     border: 1px solid var(--border-color);
 }
 
