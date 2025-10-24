@@ -526,7 +526,7 @@ main.container {
 
 /* ===== Footer ===== */
 .footer {
-    background-color: var(--bg-color);
+    background-color: var(--bg-secondary);
     border-top: 1px solid var(--border-color);
     padding: 1rem 0;
     margin-top: auto;
@@ -539,13 +539,11 @@ main.container {
     padding: 0 1.5rem;
     text-align: center;
     color: var(--text-light);
-    opacity: 0.5;
-    font-size: 0.85rem;
 }
 
 .footer a {
-    color: var(--text-light);
-    font-weight: 400;
+    color: var(--primary-color);
+    font-weight: 500;
 }
 
 /* ===== No Content Messages ===== */
