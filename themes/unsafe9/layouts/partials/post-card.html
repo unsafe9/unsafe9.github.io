@@ -18,7 +18,8 @@
                 <span class="separator">•</span>
                 <div class="post-card-tags">
                     {{- range .Params.tags }}
-                    <span class="tag">{{ . }}</span>
+                    {{- $tagURL := printf "/tags/%s" (. | urlize) }}
+                    <span class="tag" onclick="event.stopPropagation(); event.preventDefault(); window.location='{{ $tagURL }}'">{{ . }}</span>
                     {{- end }}
                 </div>
                 {{- end }}
