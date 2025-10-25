@@ -11,9 +11,9 @@ main {
   --color-prettylights-syntax-string: #666666;
   --color-prettylights-syntax-variable: #222222;
 
-  --color-canvas-default: #ffffff;
-  --color-canvas-overlay: #ffffff;
-  --color-canvas-inset: #ffffff;
+  --color-canvas-default: transparent;
+  --color-canvas-overlay: transparent;
+  --color-canvas-inset: transparent;
   --color-canvas-subtle: #f5f5f5;
 
   --color-border-default: #dddddd;
@@ -61,7 +61,7 @@ main {
   --color-btn-primary-disabled-border: #80b3e6;
 
   /* Input */
-  --color-input-bg: #ffffff;
+  --color-input-bg: transparent;
   --color-input-border: #dddddd;
   --color-input-disabled-bg: #f5f5f5;
   --color-input-disabled-border: #dddddd;
@@ -83,7 +83,7 @@ main .gsc-loading-image {
 
 /* Direct background color overrides */
 .gsc-main {
-  background-color: #ffffff !important;
+  background-color: transparent !important;
 }
 
 /* Comment box and loading states */
@@ -92,7 +92,7 @@ main .gsc-loading-image {
 .gsc-comment-box-textarea,
 .gsc-timeline-item,
 .gsc-comment {
-  background-color: #ffffff !important;
+  background-color: transparent !important;
   border-color: #dddddd !important;
 }
 

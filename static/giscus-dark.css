@@ -1,15 +1,15 @@
 /* Custom Giscus Dark Theme - Matching unsafe9 blog */
-/* Dark theme colors: bg=#1a1a1a, text=#e0e0e0, border=#3a3a3a */
+/* Dark theme colors: bg=#262624, text=#bfbfbc, border=#333333 */
 
 main {
-  --color-prettylights-syntax-comment: #a0a0a0;
+  --color-prettylights-syntax-comment: #a8a8a5;
   --color-prettylights-syntax-constant: #4a9eff;
   --color-prettylights-syntax-entity: #4a9eff;
-  --color-prettylights-syntax-storage-modifier-import: #e0e0e0;
+  --color-prettylights-syntax-storage-modifier-import: #bfbfbc;
   --color-prettylights-syntax-entity-tag: #4a9eff;
   --color-prettylights-syntax-keyword: #4a9eff;
-  --color-prettylights-syntax-string: #a0a0a0;
-  --color-prettylights-syntax-variable: #e0e0e0;
+  --color-prettylights-syntax-string: #a8a8a5;
+  --color-prettylights-syntax-variable: #bfbfbc;
   --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
   --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
   --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
@@ -18,67 +18,67 @@ main {
   --color-prettylights-syntax-string-regexp: #4a9eff;
   --color-prettylights-syntax-markup-list: #f2cc60;
   --color-prettylights-syntax-markup-heading: #4a9eff;
-  --color-prettylights-syntax-markup-italic: #e0e0e0;
-  --color-prettylights-syntax-markup-bold: #e0e0e0;
+  --color-prettylights-syntax-markup-italic: #bfbfbc;
+  --color-prettylights-syntax-markup-bold: #bfbfbc;
   --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
   --color-prettylights-syntax-markup-deleted-bg: #67060c;
   --color-prettylights-syntax-markup-inserted-text: #aff5b4;
   --color-prettylights-syntax-markup-inserted-bg: #033a16;
   --color-prettylights-syntax-markup-changed-text: #ffdfb6;
   --color-prettylights-syntax-markup-changed-bg: #5a1e02;
-  --color-prettylights-syntax-markup-ignored-text: #e0e0e0;
+  --color-prettylights-syntax-markup-ignored-text: #bfbfbc;
   --color-prettylights-syntax-markup-ignored-bg: #1158c7;
   --color-prettylights-syntax-meta-diff-range: #4a9eff;
-  --color-prettylights-syntax-brackethighlighter-angle: #a0a0a0;
+  --color-prettylights-syntax-brackethighlighter-angle: #a8a8a5;
   --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
   --color-prettylights-syntax-constant-other-reference-link: #4a9eff;
 
   /* Button colors */
-  --color-btn-text: #e0e0e0;
-  --color-btn-bg: #2a2a2a;
-  --color-btn-border: rgba(224, 224, 224, 0.1);
+  --color-btn-text: #bfbfbc;
+  --color-btn-bg: #30302e;
+  --color-btn-border: rgba(191, 191, 188, 0.1);
   --color-btn-shadow: 0 0 transparent;
   --color-btn-inset-shadow: 0 0 transparent;
-  --color-btn-hover-bg: #333333;
-  --color-btn-hover-border: #a0a0a0;
-  --color-btn-active-bg: #2d2d2d;
+  --color-btn-hover-bg: #3a3a38;
+  --color-btn-hover-border: #a8a8a5;
+  --color-btn-active-bg: #35302e;
   --color-btn-active-border: #6e7681;
-  --color-btn-selected-bg: #1a1a1a;
+  --color-btn-selected-bg: #262624;
 
   --color-btn-primary-text: #ffffff;
   --color-btn-primary-bg: #4a9eff;
-  --color-btn-primary-border: rgba(224, 224, 224, 0.1);
+  --color-btn-primary-border: rgba(191, 191, 188, 0.1);
   --color-btn-primary-shadow: 0 0 transparent;
   --color-btn-primary-inset-shadow: 0 0 transparent;
   --color-btn-primary-hover-bg: #2a7ecc;
-  --color-btn-primary-hover-border: rgba(224, 224, 224, 0.1);
+  --color-btn-primary-hover-border: rgba(191, 191, 188, 0.1);
   --color-btn-primary-selected-bg: #1a6eaa;
   --color-btn-primary-selected-shadow: 0 0 transparent;
   --color-btn-primary-disabled-text: rgba(255, 255, 255, 0.5);
   --color-btn-primary-disabled-bg: rgba(74, 158, 255, 0.6);
-  --color-btn-primary-disabled-border: rgba(224, 224, 224, 0.1);
+  --color-btn-primary-disabled-border: rgba(191, 191, 188, 0.1);
 
-  --color-action-list-item-default-hover-bg: rgba(160, 160, 160, 0.12);
+  --color-action-list-item-default-hover-bg: rgba(168, 168, 165, 0.12);
   --color-segmented-control-bg: rgba(110, 118, 129, 0.1);
-  --color-segmented-control-button-bg: #1a1a1a;
+  --color-segmented-control-button-bg: #262624;
   --color-segmented-control-button-selected-border: #6e7681;
 
   /* Foreground colors */
-  --color-fg-default: #e0e0e0;
-  --color-fg-muted: #a0a0a0;
+  --color-fg-default: #bfbfbc;
+  --color-fg-muted: #a8a8a5;
   --color-fg-subtle: #6e7681;
 
   /* Canvas (background) colors - This is the key! */
-  --color-canvas-default: #1a1a1a;
-  --color-canvas-overlay: #1a1a1a;
-  --color-canvas-inset: #1a1a1a;
-  --color-canvas-subtle: #2a2a2a;
+  --color-canvas-default: transparent;
+  --color-canvas-overlay: transparent;
+  --color-canvas-inset: transparent;
+  --color-canvas-subtle: #30302e;
 
   /* Border colors */
-  --color-border-default: #3a3a3a;
-  --color-border-muted: #2a2a2a;
+  --color-border-default: #333333;
+  --color-border-muted: #30302e;
 
-  --color-neutral-muted: rgba(160, 160, 160, 0.1);
+  --color-neutral-muted: rgba(168, 168, 165, 0.1);
 
   --color-accent-fg: #4a9eff;
   --color-accent-emphasis: #4a9eff;
@@ -94,17 +94,17 @@ main {
   --color-danger-subtle: rgba(248, 81, 73, 0.1);
 
   --color-primer-shadow-inset: 0 0 transparent;
-  --color-scale-gray-7: #2a2a2a;
+  --color-scale-gray-7: #30302e;
   --color-scale-blue-8: #0c2d6b;
 
   /* Input fields */
-  --color-input-bg: #1a1a1a;
-  --color-input-border: #3a3a3a;
-  --color-input-disabled-bg: #2a2a2a;
-  --color-input-disabled-border: #3a3a3a;
+  --color-input-bg: transparent;
+  --color-input-border: #333333;
+  --color-input-disabled-bg: #30302e;
+  --color-input-disabled-border: #333333;
 
   /* Other UI elements */
-  --color-timeline-badge-bg: #2a2a2a;
+  --color-timeline-badge-bg: #30302e;
   --color-social-reaction-bg-hover: var(--color-scale-gray-7);
   --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
 }
@@ -119,7 +119,7 @@ main .gsc-loading-image {
 
 /* Direct background color overrides */
 .gsc-main {
-  background-color: #1a1a1a !important;
+  background-color: transparent !important;
 }
 
 /* Comment box and loading states */
@@ -128,11 +128,11 @@ main .gsc-loading-image {
 .gsc-comment-box-textarea,
 .gsc-timeline-item,
 .gsc-comment {
-  background-color: #1a1a1a !important;
-  border-color: #3a3a3a !important;
+  background-color: transparent !important;
+  border-color: #333333 !important;
 }
 
 .gsc-comment-box-tabs,
 .gsc-comment-box-tab {
-  background-color: #2a2a2a !important;
+  background-color: #30302e !important;
 }
