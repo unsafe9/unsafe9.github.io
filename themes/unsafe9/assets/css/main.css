@@ -21,14 +21,14 @@
 
 [data-theme="dark"] {
     --primary-color: #4a9eff;
-    --text-color: #e0e0e0;
-    --text-light: #a0a0a0;
-    --text-muted: #666666;
-    --bg-color: #1a1a1a;
-    --bg-secondary: #2a2a2a;
-    --bg-footer: #151515;
-    --border-color: #3a3a3a;
-    --code-bg: #2d2d2d;
+    --text-color: #bfbfbc;
+    --text-light: #a8a8a5;
+    --text-muted: #808080;
+    --bg-color: #262624;
+    --bg-secondary: #30302e;
+    --bg-footer: #1f1f1d;
+    --border-color: #333333;
+    --code-bg: #30302e;
 }
 
 html {
@@ -235,7 +235,7 @@ main.container {
 }
 
 .post-card-title {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 400;
     margin: 0;
     color: var(--primary-color);
@@ -570,7 +570,7 @@ main.container {
     padding: 0 1.5rem;
     text-align: center;
     color: var(--text-light);
-    opacity: 0.5;
+    opacity: 0.8;
     font-size: 0.85rem;
 }
 
