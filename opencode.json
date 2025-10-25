@@ -6,41 +6,32 @@
       "url": "https://mcp.context7.com/mcp",
       "headers": {
         "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
-      },
-      "enabled": true
+      }
     },
     "github": {
       "type": "remote",
       "url": "https://api.githubcopilot.com/mcp",
       "headers": {
         "Authorization": "Bearer {env:GITHUB_PERSONAL_ACCESS_TOKEN}"
-      },
-      "enabled": true
+      }
     },
     "octocode": {
       "type": "local",
-      "command": ["npx", "octocode-mcp@latest"],
-      "enabled": true
+      "command": ["npx", "octocode-mcp@latest"]
     },
     "chrome-devtools": {
       "type": "local",
-      "command": ["npx", "chrome-devtools-mcp@latest"],
-      "enabled": true
+      "command": ["npx", "chrome-devtools-mcp@latest"]
     }
   },
   "tools": {
     "github*": false
   },
   "agent": {
-    "git-manager": {
-      "description": "Manages git branching, commits changes with detailed breakdown of modifications, and handles version control operations",
-      "mode": "subagent",
+    "git-workflow-manager": {
       "tools": {
-        "github*": true,
-        "write": false,
-        "edit": false
-      },
-      "prompt": "{file:./.opencode/prompts/git-manager.txt}"
+        "github*": true
+      }
     }
   }
 }
