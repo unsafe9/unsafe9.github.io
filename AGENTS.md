@@ -105,4 +105,5 @@ Specialized subagent for version control operations. Invoke with `@git-manager` 
 1. `hugo new posts/title.md`
 2. Edit front matter (title, date, tags)
 3. Write content in markdown
-4. Preview with `hugo server -D`
+4. Preview with `hugo server -D`. Run in background to keep your actions
+
