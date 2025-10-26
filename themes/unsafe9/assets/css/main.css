@@ -21,9 +21,9 @@
 
 [data-theme="dark"] {
     --primary-color: #4a9eff;
-    --text-color: #bfbfbc;
-    --text-light: #a8a8a5;
-    --text-muted: #808080;
+    --text-color: #f0f0ee;
+    --text-light: #c8c8c5;
+    --text-muted: #999999;
     --bg-color: #262624;
     --bg-secondary: #30302e;
     --bg-footer: #1f1f1d;
