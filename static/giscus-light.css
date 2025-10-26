@@ -103,6 +103,32 @@ main .gsc-loading-image {
   border-color: #dddddd !important;
 }
 
+/* Ensure proper text colors for visibility */
+.gsc-comment-content,
+.gsc-comment-header,
+.gsc-comment-author,
+.gsc-comment-body,
+.gsc-comment-text,
+.gsc-main,
+.gsc-timeline,
+body {
+  color: #222222 !important;
+}
+
+/* Muted text elements */
+.gsc-comment-author-name,
+.gsc-comment-metadata,
+.gsc-reactions-count {
+  color: #666666 !important;
+}
+
+/* Links should use primary color */
+a,
+.gsc-comment-author-name a,
+.gsc-comment-header a {
+  color: #0066cc !important;
+}
+
 .gsc-comment-box-tabs,
 .gsc-comment-box-tab {
   background-color: #f5f5f5 !important;
