@@ -27,20 +27,4 @@ I build high-performance backend services in the gaming industry, primarily usin
 
 I'm language-agnostic and believe in choosing the right tool for each problem.
 
-## What You'll Find Here
-
-This blog covers:
-
-**AI & Automation**
-- AI agents and multi-agent systems
-- Developer productivity tools
-- Workflow automation
-
-**Backend Engineering**
-- System design patterns
-- Performance optimization
-- Real-world implementation insights
-
-I'm currently exploring how AI agents can transform developer workflows and build more intelligent automation systems.
-
 Thanks for visiting!
